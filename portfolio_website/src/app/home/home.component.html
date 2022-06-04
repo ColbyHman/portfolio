@@ -9,7 +9,12 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <div>Card Content</div>
+          <div>
+          <app-certs *ngIf="card.selector == 'certs'"></app-certs>
+          <app-home-servers *ngIf="card.selector == 'servers'"></app-home-servers>
+          <app-languages *ngIf="card.selector == 'langs'"></app-languages>
+          <app-socials *ngIf="card.selector == 'socials'"></app-socials>
+          </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
